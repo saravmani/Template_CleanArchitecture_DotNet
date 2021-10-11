@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Scorpion.SchoolManagement.Common.Contracts\Scorpion.SchoolManagement.Common.Contracts.csproj" />
+    <ProjectReference Include="..\Scorpion.SchoolManagement.Student.Applicaiton\Scorpion.SchoolManagement.Student.Applicaiton.csproj" />
+    <ProjectReference Include="..\Scorpion.SchoolManagement.Student.Domain\Scorpion.SchoolManagement.Student.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="StudentManagement.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
