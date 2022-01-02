@@ -9,9 +9,11 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Scorpion.SchoolManagement.Employee.ApiGrpc;
 using Scorpion.SchoolManagement.Student.Applicaiton;
 using Scorpion.SchoolManagement.Student.Persister;
 
@@ -30,6 +32,9 @@ namespace Scorpion.SchoolManagement.Student.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            // Grpc Configuration
+            //services.AddGrpcClient<Greeter.GreeterClient>
+            //    (o => o.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
 
             services.AddApplicationServices();
             services.AddPersisterServices();
@@ -39,6 +44,7 @@ namespace Scorpion.SchoolManagement.Student.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Scorpion.SchoolManagement.Student.Api", Version = "v1" });
             });
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +67,8 @@ namespace Scorpion.SchoolManagement.Student.Api
             {
                 endpoints.MapControllers();
             });
+
+            
         }
     }
 }

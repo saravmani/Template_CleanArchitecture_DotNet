@@ -1,0 +1,71 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/v1/Student",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7001
+                }
+            ],
+            "UpstreamPathTemplate": "/Student",
+            "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+            "Key": "Student"
+        },
+        {
+            "DownstreamPathTemplate": "/api/v1/Employee",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 8001
+                }
+            ],
+            "UpstreamPathTemplate": "/Employee",
+            "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+            "Key": "Employee"
+        }
+        //{
+        //    "DownstreamPathTemplate": "/api/{everything}",
+        //    "DownstreamScheme": "https",
+        //    "DownstreamHostAndPorts": [
+        //        {
+        //            "Host": "localhost",
+        //            "Port": 7001
+        //        }
+        //    ],
+        //    "UpstreamPathTemplate": "/api/{everything}",
+        //    "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+        //    "SwaggerKey": "Student"
+        //}
+    ],
+    "Aggregates": [
+        {
+            "RouteKeys": [
+                "Student",
+                "Employee"
+            ],
+            "UpstreamPathTemplate": "/StudentDetails",
+            "Aggregator": "StudentStaffAggrigator"
+        }
+    ],
+
+    "SwaggerEndPoints": [
+        {
+            "Key": "Student",
+            "Config": [
+                {
+                    "Name": "Scorpion.SchoolManagement.Student.Api",
+                    "Version": "v1",
+                    "Url": "https://localhost:7001/swagger/v1/swagger.json"
+                }
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        //"RequestIdKey": "OcRequestId",
+        //"AdministrationPath": "/administration"
+        "BaseUrl": "http://localhost"
+    }
+}

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.SchoolManagement.Student.Api", "Services\StudentService\Scorpion.SchoolManagement.Student.Api\Scorpion.SchoolManagement.Student.Api.csproj", "{F349C658-178C-46F3-B60F-4151764990BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.Student.Api", "Services\StudentService\Scorpion.SchoolManagement.Student.Api\Scorpion.SchoolManagement.Student.Api.csproj", "{F349C658-178C-46F3-B60F-4151764990BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F14E0E52-04DE-4B86-BCA3-8084ABCA8ADD}"
 EndProject
@@ -11,13 +11,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StudentService", "StudentSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.Student.Applicaiton", "Services\StudentService\Scorpion.SchoolManagement.Student.Applicaiton\Scorpion.SchoolManagement.Student.Applicaiton.csproj", "{80A3A054-1715-485C-B905-7E593E828CF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.SchoolManagement.Student.Domain", "Services\StudentService\Scorpion.SchoolManagement.Student.Domain\Scorpion.SchoolManagement.Student.Domain.csproj", "{E2C993D5-91C3-4298-86E9-5B255652A212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.Student.Domain", "Services\StudentService\Scorpion.SchoolManagement.Student.Domain\Scorpion.SchoolManagement.Student.Domain.csproj", "{E2C993D5-91C3-4298-86E9-5B255652A212}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.SchoolManagement.Student.Persister", "Services\StudentService\Scorpion.SchoolManagement.Student.Persister\Scorpion.SchoolManagement.Student.Persister.csproj", "{2DD1FAD4-4507-49BE-A842-C192E7A81714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.Student.Persister", "Services\StudentService\Scorpion.SchoolManagement.Student.Persister\Scorpion.SchoolManagement.Student.Persister.csproj", "{2DD1FAD4-4507-49BE-A842-C192E7A81714}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{DFDF7D75-68AC-4D3D-880C-5EBBCBF7D461}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.Common.Contracts", "Common\Scorpion.SchoolManagement.Common.Contracts\Scorpion.SchoolManagement.Common.Contracts.csproj", "{FF6B9B8C-68DA-41B8-A2D8-9B0B117AFB2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmployeeService", "EmployeeService", "{83B1C04D-DC39-4B83-A179-E7CD0CCCB096}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.Employee.Api", "Services\EmployeeService\Scorpion.SchoolManagement.Employee.Api\Scorpion.SchoolManagement.Employee.Api.csproj", "{89A9C5DA-9F25-4150-9CAD-FDFFA3BDB275}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.Employee.ApiGrpc", "Services\EmployeeService\Scorpion.SchoolManagement.Employee.ApiGrpc\Scorpion.SchoolManagement.Employee.ApiGrpc.csproj", "{B8C030B6-17E3-4ACC-8E9C-A706EF7AECFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Course", "Course", "{968EFC14-8B41-4950-9B2E-772307D0BA95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EndPoints", "EndPoints", "{F8F8FC80-C3DC-4D97-9E36-CB615F45D5D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.MasterApiGateway", "EndPoints\Scorpion.SchoolManagement.MasterApiGateway\Scorpion.SchoolManagement.MasterApiGateway.csproj", "{9AE620CB-AF85-4519-A451-B4CC08CD296A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LongRunningServices", "LongRunningServices", "{ECD88E6F-C357-4903-B8ED-444F541845E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scorpion.SchoolManagement.NotificationService", "BackGroundServices\Scorpion.SchoolManagement.NotificationService\Scorpion.SchoolManagement.NotificationService.csproj", "{A10DD334-DDD8-4679-A201-11291F0CCC13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crosscutting", "Crosscutting", "{EA538758-A410-4954-BDBB-A408D5959932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpion.SchoolManagement.HealthCheck", "Crosscutting\Scorpion.SchoolManagement.HealthCheck\Scorpion.SchoolManagement.HealthCheck.csproj", "{97C88C6F-EDB0-422C-9D4E-2CC694ABDC05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +65,26 @@ Global
 		{FF6B9B8C-68DA-41B8-A2D8-9B0B117AFB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF6B9B8C-68DA-41B8-A2D8-9B0B117AFB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF6B9B8C-68DA-41B8-A2D8-9B0B117AFB2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89A9C5DA-9F25-4150-9CAD-FDFFA3BDB275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89A9C5DA-9F25-4150-9CAD-FDFFA3BDB275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89A9C5DA-9F25-4150-9CAD-FDFFA3BDB275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89A9C5DA-9F25-4150-9CAD-FDFFA3BDB275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C030B6-17E3-4ACC-8E9C-A706EF7AECFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C030B6-17E3-4ACC-8E9C-A706EF7AECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C030B6-17E3-4ACC-8E9C-A706EF7AECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C030B6-17E3-4ACC-8E9C-A706EF7AECFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE620CB-AF85-4519-A451-B4CC08CD296A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE620CB-AF85-4519-A451-B4CC08CD296A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE620CB-AF85-4519-A451-B4CC08CD296A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE620CB-AF85-4519-A451-B4CC08CD296A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10DD334-DDD8-4679-A201-11291F0CCC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10DD334-DDD8-4679-A201-11291F0CCC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10DD334-DDD8-4679-A201-11291F0CCC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10DD334-DDD8-4679-A201-11291F0CCC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C88C6F-EDB0-422C-9D4E-2CC694ABDC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C88C6F-EDB0-422C-9D4E-2CC694ABDC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C88C6F-EDB0-422C-9D4E-2CC694ABDC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C88C6F-EDB0-422C-9D4E-2CC694ABDC05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +96,13 @@ Global
 		{E2C993D5-91C3-4298-86E9-5B255652A212} = {B74620B2-3253-49DD-841D-64D841F6D82E}
 		{2DD1FAD4-4507-49BE-A842-C192E7A81714} = {B74620B2-3253-49DD-841D-64D841F6D82E}
 		{FF6B9B8C-68DA-41B8-A2D8-9B0B117AFB2F} = {DFDF7D75-68AC-4D3D-880C-5EBBCBF7D461}
+		{83B1C04D-DC39-4B83-A179-E7CD0CCCB096} = {F14E0E52-04DE-4B86-BCA3-8084ABCA8ADD}
+		{89A9C5DA-9F25-4150-9CAD-FDFFA3BDB275} = {83B1C04D-DC39-4B83-A179-E7CD0CCCB096}
+		{B8C030B6-17E3-4ACC-8E9C-A706EF7AECFF} = {83B1C04D-DC39-4B83-A179-E7CD0CCCB096}
+		{968EFC14-8B41-4950-9B2E-772307D0BA95} = {F14E0E52-04DE-4B86-BCA3-8084ABCA8ADD}
+		{9AE620CB-AF85-4519-A451-B4CC08CD296A} = {F8F8FC80-C3DC-4D97-9E36-CB615F45D5D4}
+		{A10DD334-DDD8-4679-A201-11291F0CCC13} = {ECD88E6F-C357-4903-B8ED-444F541845E7}
+		{97C88C6F-EDB0-422C-9D4E-2CC694ABDC05} = {EA538758-A410-4954-BDBB-A408D5959932}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {833DCB55-BD97-4DA1-BFE0-932194DADDD9}

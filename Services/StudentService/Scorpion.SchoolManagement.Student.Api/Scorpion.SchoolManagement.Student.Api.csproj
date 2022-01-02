@@ -1,26 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.0" NoWarn="NU1605" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.0" NoWarn="NU1605" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
-	  <PackageReference Include="AutoMapper" Version="10.1.1" />
-	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.0" NoWarn="NU1605" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.0" NoWarn="NU1605" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.32.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Scorpion.SchoolManagement.Student.Applicaiton\Scorpion.SchoolManagement.Student.Applicaiton.csproj" />
-    <ProjectReference Include="..\Scorpion.SchoolManagement.Student.Persister\Scorpion.SchoolManagement.Student.Persister.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Scorpion.SchoolManagement.Student.Applicaiton\Scorpion.SchoolManagement.Student.Applicaiton.csproj" />
+		<ProjectReference Include="..\Scorpion.SchoolManagement.Student.Persister\Scorpion.SchoolManagement.Student.Persister.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="StudentManagement.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+	  <Protobuf Include="..\..\EmployeeService\Scorpion.SchoolManagement.Employee.Api\Protos\greet.proto" GrpcServices="Client">
+	    <Link>Protos\greet.proto</Link>
+	  </Protobuf>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="StudentManagement.db">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>

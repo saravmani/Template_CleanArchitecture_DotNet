@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+//using Scorpion.SchoolManagement.EmployeeManagement.ApiGrpc;
+using Scorpion.SchoolManagement.Employee.ApiGrpc;
+
 using Scorpion.SchoolManagement.Student.Api.ViewModel;
 using Scorpion.SchoolManagement.Student.Applicaiton.Commands;
 using Scorpion.SchoolManagement.Student.Applicaiton.Interfaces;
@@ -22,7 +26,7 @@ namespace Scorpion.SchoolManagement.Student.Api.Controllers
 
         private readonly IHandleStudent _handleStudent;
         private readonly IMapper _Mapper;
-
+        //private readonly Greeter.GreeterClient _greaterClient;
 
         public StudentController(IMediator mediator, IHandleStudent handleStudent, IMapper mapper)
         {
@@ -30,6 +34,7 @@ namespace Scorpion.SchoolManagement.Student.Api.Controllers
             _mediator = mediator;
             _handleStudent = handleStudent;
             _Mapper = mapper;
+            //_greaterClient = greaterClient;
         }
 
         // GET: api/<StudentController>
@@ -41,13 +46,18 @@ namespace Scorpion.SchoolManagement.Student.Api.Controllers
 
         // GET api/<StudentController>/5
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
         public string Get(int id)
         {
+            //var response = _greaterClient.SayHello(new HelloRequest { 
+            //     Name="ding dong"
+            //});
             return "value";
         }
 
         // POST api/<StudentController>
         [HttpPost]
+
         public void Post(StudentDetailsVm objStudentDetailsVm)
         {
 

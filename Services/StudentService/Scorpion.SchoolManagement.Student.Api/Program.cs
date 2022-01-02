@@ -22,5 +22,13 @@ namespace Scorpion.SchoolManagement.Student.Api
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+                //.ConfigureLogging((builderContext, logBuilder) =>
+                //{
+                //    logBuilder.AddConfiguration(builderContext.Configuration.GetSection("Logging"));
+                //    logBuilder.AddEventLog();
+                //    logBuilder.AddConsole();
+                //    logBuilder.AddDebug();                
+                //});
+            
     }
 }
